@@ -5,7 +5,7 @@ import { useSortableData } from "../../utils/useSortTable";
 const ProductTable = (props) => {
     const { products } = props;
     const { items, requestSort, sortConfig } = useSortableData(products);
-    
+
     const getClassNamesFor = (name) => {
         if (!sortConfig) {
             return;
@@ -34,7 +34,7 @@ const ProductTable = (props) => {
                     <tr key={item.id}>
                         <td>{i+1}</td>
                         <td>{item.item}</td>
-                        <td>${item.price}</td>
+                        <td>Rp. {item.price}</td>
                     </tr>
                 ))}
             </tbody>
